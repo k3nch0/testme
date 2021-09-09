@@ -1,0 +1,10 @@
+.announcement-banner {
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    background: transparent;
+    color: #fff;
+    padding: 15px 0;
+}

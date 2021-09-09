@@ -1,0 +1,111 @@
+.hero2 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+}
+.hero2--50vh {
+  height: 50vh;
+}
+.hero2--75vh {
+  height: 75vh;
+}
+.hero2--82vh {
+  height: 82vh;
+}
+.hero2--100vh {
+  height: 100vh;
+}
+.hero2 .hero2__collection1 {
+  width: 50%;
+  position: relative;
+  height: 100%;
+}
+.hero2 .hero2__collection1 .hero2__content-container {
+  justify-content: flex-end;
+  padding-right: 7rem;
+}
+.hero2 .hero2__collection2 {
+  width: 50%;
+  position: relative;
+  height: 100%;
+}
+.hero2 .hero2__collection2 .hero2__content-container {
+  justify-content: flex-start;
+  padding-left: 7rem;
+}
+.hero2--aligned-center .hero2__content-container {
+  justify-content: center;
+}
+.hero2__bg {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero2__content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10rem;
+}
+.hero2__info {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero2__title {
+  font-size: 3rem;
+  font-family: Bebas Neue;
+  color: #fff;
+  letter-spacing: 0.3rem;
+}
+.hero2__title--fontsmallHeader {
+  font-size: 2rem;
+}
+.hero2__title--fontmediumHeader {
+  font-size: 3rem;
+}
+.hero2__title--fontlargeHeader {
+  font-size: 4.5rem;
+}
+.hero2__title--fontxlargeHeader {
+  font-size: 6rem;
+}
+.hero2__description {
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+}
+.hero2__button {
+  box-sizing: border-box;
+  padding: 12px 20px;
+  background: transparent;
+  text-align: center;
+  width: 200px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  border: 2px solid #fff;
+  color: white;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.hero2__button:hover {
+  background: white;
+  color: black;
+}

@@ -1,0 +1,258 @@
+{{ 'section-footer1.css' | asset_url | stylesheet_tag }}
+
+    <footer class="footer1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer__logo">
+              <a title="logo" href="{{ routes.root_url }}">
+                {%- if section.settings.logo != blank -%}
+                  {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+                  <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                    src="{{ section.settings.logo | img_url: image_size }}"
+                    loading="lazy"
+                    class="footer__footer-logo"
+                    width="{{ section.settings.logo.width }}"
+                    height="{{ section.settings.logo.height }}"
+                    alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+                  >
+                {%- else -%}
+                  {{ shop.name }}
+                {%- endif -%}
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              {%- for block in section.blocks -%}
+                <div class="col-md-4">
+                  <div class="footer1__links">
+                    <span class="footer1__column-title">{{ block.settings.heading }}</span>
+                    {%- for link in block.settings.menu.links -%}
+                      <a title="footer-link" href="{{ link.url }}" class="footer1__link">{{ link.title }}</a>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="footer1__extra">
+              {% if section.settings.newsletter_enable != false %}
+                <span class="footer1__column-title">{{ section.settings.newsletter_heading }}</span>
+                {%- form 'customer' -%}
+                  <div class="newsletter-form__field-wrapper">
+                    <div class="field">
+                      <input
+                        type="email"
+                        name="contact[email]"
+                        class="footer1__input"
+                        value="{{ form.email }}"
+                        aria-required="true"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        autocomplete="email"
+                        {% if form.errors %}
+                          autofocus
+                          aria-invalid="true"
+                          aria-describedby="ContactFooter-error"
+                        {% elsif form.posted_successfully? %}
+                          aria-describedby="ContactFooter-success"
+                        {% endif %}
+                        placeholder="Enter your email..."
+                        required
+                        style="width: 100%; padding: 5px 10px;"
+                      >
+                    </div>
+                    {%- if form.errors -%}
+                      <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                    {%- endif -%}
+                  </div>
+                  <button type="submit" name="commit" style="width: 100%; font-size: 1rem; padding: 10px 40px; text-align: center; margin-bottom: 1rem; font-weight: 500; letter-spacing: 1px;">
+                    Subscribe
+                  </button>
+                  {%- if form.posted_successfully? -%}
+                    <h3 style="font-size: .9rem; color: white;">{{ 'newsletter.success' | t }}</h3>
+                  {%- endif -%}
+                {%- endform -%}
+              {% endif %}
+              <p>{{ section.settings.footer_description }}</p>
+              {% if section.settings.show_social != false %}
+                <div class="footer1__social-icons">
+                  {%- if settings.social_facebook_link != blank -%}
+                    <a title="facebook" href="{{ settings.social_facebook_link }}" class="footer1__social-link">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  {%- endif -%}
+                  {%- if settings.social_instagram_link != blank -%}
+                    <a title="instagram" href="{{ settings.social_instagram_link }}" class="footer1__social-link">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  {%- endif -%}
+                  {%- if settings.social_youtube_link != blank -%}
+                    <a title="youtube" href="{{ settings.social_youtube_link }}" class="footer1__social-link">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  {%- endif -%}
+                  {%- if settings.social_twitter_link != blank -%}
+                    <a title="twitter" href="{{ settings.social_twitter_link }}" class="footer1__social-link">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  {%- endif -%}
+                  {%- if settings.social_pinterest_link != blank -%}
+                    <a title="pinterest" href="{{ settings.social_pinterest_link }}" class="footer1__social-link">
+                      <i class="fab fa-pinterest"></i>
+                    </a>
+                  {%- endif -%}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer1__bottom">
+              <div class="footer1__copyright">© {{ 'now' | date: "%Y" }}, {{ shop.name }} All Rights Reserved</div>
+              {%- if section.settings.payment_enable -%}
+                <div class="footer1__payment">
+                  <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+                  <ul class="list list-payment" role="list">
+                    {%- for type in shop.enabled_payment_types -%}
+                      <li class="list-payment__item">
+                        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+              <div class="footer1__extra-links">
+                {%- for link in section.settings.footer_bottom_menu.links -%}
+                  <a title="footer-extra-links" href="{{ link.url }}">{{ link.title }}</a>
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Thrasher Theme Guru Card"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Click here for tips and best practices](https://thrasio.com)"
+    },
+    {
+      "type": "header",
+      "content": "Footer Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Select Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "default": 250,
+      "unit": "px",
+      "label": "Logo Sharpness"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__1.content",
+      "info": "t:sections.footer.settings.header__1.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "Join Our Newsletter",
+      "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "header",
+      "content": "Description Text"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_description",
+      "label": "Footer Description (Blank to Hide)",
+      "default": "Welcome to Thrasio Theme! This is a paragraph section for you to edit and update with site details, message to customers, etc!"
+    },
+    {
+      "type": "header",
+      "content": "Footer Bottom Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_bottom_menu",
+      "label": "Pages: Privacy Policy, Terms of Use, etc."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__2.content",
+      "info": "t:sections.footer.settings.header__2.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": true,
+      "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__7.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.payment_enable.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "t:sections.footer.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Menu Name",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label",
+          "info": "t:sections.footer.blocks.link_list.settings.heading.info"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      }
+    ]
+  }
+}
+{% endschema %}

@@ -1,0 +1,66 @@
+.header3 {
+  background: transparent;
+  color: #b6b6b6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  transition: all .3s ease-in-out;
+  z-index: 99;
+}
+.header3 a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+}
+.header3 a:hover {
+  color: yellow;
+}
+.header3__collections-nav {
+  display: flex;
+  margin-bottom: 0;
+}
+.header3__collections-nav a {
+  padding-right: 20px;
+  text-align: center;
+  display: inline-block;
+}
+.header3__collection-link {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.header3__collection-link .collection-link__sub-links {
+  visibility: hidden;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  padding: 20px 0;
+  margin-top: 10px;
+  min-width: 150px;
+  top: 20px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+.header3__collection-link .collection-link__sub-links a {
+  color: rgb(51, 51, 51);
+  font-size: 0.9rem;
+  display: block;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+.header3__collection-link .collection-link__sub-links a:hover {
+  color: #000;
+  transform: scale(1.005);
+}
+.header3__collection-link:hover .collection-link__sub-links {
+  visibility: visible;
+  opacity: 1;
+}
+.header3__logo a {
+  font-size: 2rem;
+  font-family: Bebas Neue;
+}

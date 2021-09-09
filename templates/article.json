@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "162973276971f54775": {
+      "type": "cta-banner",
+      "disabled": true,
+      "blocks": {
+        "162973276971f54775-0": {
+          "type": "heading",
+          "settings": {
+            "title": "H2 Title",
+            "title_size": "fontmediumTitle",
+            "title_text_color": "#ffffff"
+          }
+        },
+        "162973276971f54775-1": {
+          "type": "description",
+          "settings": {
+            "description": "Welcome to Thrasio Theme! This is a new theme to promote your brand and amazing products!",
+            "description_size": "fontsmallDescription",
+            "description_text_color": "#ffffff"
+          }
+        },
+        "162973276971f54775-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button Label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "162973276971f54775-0",
+        "162973276971f54775-1",
+        "162973276971f54775-2"
+      ],
+      "settings": {
+        "cta_height": "40vh",
+        "background_color": "#000000",
+        "overlay_opacity": 35,
+        "info_alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "162973276971f54775",
+    "main"
+  ]
+}

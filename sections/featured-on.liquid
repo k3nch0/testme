@@ -1,0 +1,277 @@
+{{ 'section-featured-on.css' | asset_url | stylesheet_tag }}
+<div class="featured-on">
+	<div class="container">
+		<div class="row">
+      <h3 class="title{% if section.settings.title == blank %} title--no-heading{% endif %} {{ section.settings.info_alignment }} {{- section.settings.title_size -}}" style="color: {{ section.settings.title_text_color }}">{{ section.settings.title | escape }}</h3>
+			{%- for block in section.blocks -%}
+			<div class="{{ section.settings.sm_col }} {{ section.settings.med_col }} {{ section.settings.lg_col }} {{ section.settings.xl_col }}">
+				<div class="featured-on__featured-item">
+					{% assign opacity = section.settings.opacity | divided_by: 100.00 %}
+					<div class="featured-on__product-img featured-on__product-img--{{section.settings.container_shape}} featured-on__product-img--contain" 
+					style="background-color: {{ section.settings.backgroundcolor | color_modify: 'alpha', opacity  }}">
+						
+						{%- if block.settings.company_logo != blank -%}
+						  <div class="img-link">
+								<img srcset="{%- if block.settings.company_logo.width >= 165 -%}{{ block.settings.company_logo  | img_url: '165x' }} 165w,{%- endif -%}
+									{%- if block.settings.company_logo.width >= 360 -%}{{ block.settings.company_logo | img_url: '360x' }} 360w,{%- endif -%}
+									{%- if block.settings.company_logo.width >= 535 -%}{{ block.settings.company_logo | img_url: '535x' }} 535w,{%- endif -%}
+									{%- if block.settings.company_logo.width >= 720 -%}{{ block.settings.company_logo | img_url: '720x' }} 720w,{%- endif -%}
+									{%- if block.settings.company_logo.width >= 940 -%}{{ block.settings.company_logo | img_url: '940x' }} 940w,{%- endif -%}
+									{%- if block.settings.company_logo.width >= 1070 -%}{{ block.settings.company_logo | img_url: '2000x' }} 2000w{%- endif -%}"
+									src="{{ block.settings.company_logo | img_url: '533x' }}"
+									sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+									alt="{{ block.settings.company_logo.alt | escape }}"
+									loading="lazy"
+									width="{{ block.settings.company_logo.width }}"
+									height="{{ block.settings.company_logo.height }}"
+									class="hero1__bg"
+								>
+              </div>
+						{%- else -%}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{%- endif -%}
+					</div>
+				</div>
+			</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</div>
+  
+  {% schema %}
+  {
+    "name": "Featured On",
+    "class": "spaced-section spaced-section--full-width",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Featured On",
+        "label": "<H3>Heading</H3>"
+      },
+      {
+        "type": "select",
+        "id": "title_size",
+        "options": [
+          {
+          "value": "fontsmallTitle",
+          "label": "Small"
+          },
+          {
+          "value": "fontmediumTitle",
+          "label": "Medium"
+          },
+          {
+          "value": "fontlargeTitle",
+          "label": "Large"
+          },
+          {
+          "value": "fontxlargeTitle",
+          "label": "Extra Large"
+          }
+        ],
+        "default": "fontmediumTitle",
+        "label": "Text Size"
+        },
+        {
+        "type": "color",
+        "id": "title_text_color",
+        "label": "Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "select",
+        "id": "info_alignment",
+        "options": [
+          {
+          "value": "left",
+          "label": "Left Side"
+          },
+          {
+          "value": "center",
+          "label": "Centered"
+          },
+          {
+          "value": "right",
+          "label": "Right Side"
+          }
+        ],
+        "default": "center",
+        "label": "Info Alignment"
+      },
+      {
+        "type": "select",
+        "id": "container_shape",
+        "options": [
+          {
+            "value": "square",
+            "label": "Square"
+          },
+          {
+            "value": "rectangle",
+            "label": "Rectangle"
+          },
+          {
+            "value": "circle",
+            "label": "Circle"
+          }
+        ],
+        "default": "square",
+        "label": "Logo Container Shape"
+      },
+      {
+        "type": "color",
+        "id": "backgroundcolor",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "range",
+        "id": "opacity",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "label": "Background Color Opacity",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Device Responsiveness"
+      },
+      {
+        "type": "select",
+        "id": "sm_col",
+        "options": [
+          {
+            "value": "col-sm-6",
+            "label": "2 Columns"
+          },
+          {
+            "value": "col-sm-4",
+            "label": "3 Columns"
+          },
+          {
+            "value": "col-sm-3",
+            "label": "4 Columns"
+          },
+          {
+            "value": "col-sm-2",
+            "label": "6 Columns"
+          }
+        ],
+        "default": "col-sm-6",
+        "label": "Small Devices"
+      },
+      {
+        "type": "select",
+        "id": "med_col",
+        "options": [
+          {
+            "value": "col-med-6",
+            "label": "2 Columns"
+          },
+          {
+            "value": "col-med-4",
+            "label": "3 Columns"
+          },
+          {
+            "value": "col-med-3",
+            "label": "4 Columns"
+          },
+          {
+            "value": "col-med-2",
+            "label": "6 Columns"
+          }
+        ],
+        "default": "col-med-4",
+        "label": "Medium Devices"
+      },
+      {
+        "type": "select",
+        "id": "lg_col",
+        "options": [
+          {
+            "value": "col-lg-6",
+            "label": "2 Columns"
+          },
+          {
+            "value": "col-lg-4",
+            "label": "3 Columns"
+          },
+          {
+            "value": "col-lg-3",
+            "label": "4 Columns"
+          },
+          {
+            "value": "col-lg-2",
+            "label": "6 Columns"
+          }
+        ],
+        "default": "col-lg-4",
+        "label": "Large Devices"
+      },
+      {
+        "type": "select",
+        "id": "xl_col",
+        "options": [
+          {
+            "value": "col-xl-6",
+            "label": "2 Columns"
+          },
+          {
+            "value": "col-xl-4",
+            "label": "3 Columns"
+          },
+          {
+            "value": "col-xl-3",
+            "label": "4 Columns"
+          },
+          {
+            "value": "col-xl-2",
+            "label": "6 Columns"
+          }
+        ],
+        "default": "col-xl-4",
+        "label": "Extra Large Devices"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "company_logo",
+        "name": "Company Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "company_logo",
+            "label": "Company Logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured On",
+        "settings":
+          {
+            "backgroundcolor": "#FFFFFF",
+            "sm_col": "col-xl-2",
+            "med_col": "col-xl-4",
+            "lg_col": "col-xl-4",
+            "xl_col": "col-xl-4"
+          },
+        "blocks": [
+          {
+            "type": "company_logo"
+          },
+          {
+            "type": "company_logo"
+          },
+          {
+            "type": "company_logo"
+          }
+        ]
+    }
+]
+  }
+  {% endschema %}
+  

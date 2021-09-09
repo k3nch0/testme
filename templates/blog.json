@@ -1,0 +1,70 @@
+{
+    "sections": {
+      "1629731676be14c8f7": {
+        "type": "page-top-banner",
+        "blocks": {
+          "1629731676be14c8f7-0": {
+            "type": "heading",
+            "settings": {
+              "title": "VYBEPERCUSSION Blog",
+              "title_size": "fontmediumTitle",
+              "title_text_color": "#FFFFFF"
+            }
+          },
+          "1629731676be14c8f7-1": {
+            "type": "description",
+            "settings": {
+              "description": "Welcome to Thrasio Theme! This is a new theme to promote your brand and amazing products!",
+              "description_size": "fontmediumDescription",
+              "description_text_color": "#FFFFFF"
+            }
+          }
+        },
+        "block_order": [
+          "1629731676be14c8f7-0",
+          "1629731676be14c8f7-1"
+        ],
+        "settings": {
+          "banner_height": "50vh",
+          "image": "shopify:\/\/shop_images\/VYBE-Percussion-Massage-Gun.jpg",
+          "background_color": "#000000",
+          "overlay_opacity": 50,
+          "info_alignment": "center"
+        }
+      },
+      "main": {
+        "type": "main-blog",
+        "blocks": {
+          "title": {
+            "type": "title",
+            "settings": {
+              "show_date": true,
+              "show_author": false
+            }
+          },
+          "summary": {
+            "type": "summary",
+            "settings": {
+            }
+          },
+          "link": {
+            "type": "link",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "title",
+          "summary",
+          "link"
+        ],
+        "settings": {
+          "show_image": true
+        }
+      }
+    },
+    "order": [
+      "1629731676be14c8f7",
+      "main"
+    ]
+  }

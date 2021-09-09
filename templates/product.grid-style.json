@@ -1,0 +1,130 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product-alt",
+        "blocks": {
+          "vendor": {
+            "type": "text",
+            "settings": {
+              "text": "{{ product.vendor }}",
+              "text_style": "uppercase"
+            }
+          },
+          "title": {
+            "type": "title",
+            "settings": {
+            }
+          },
+          "subtitle": {
+            "type": "text",
+            "settings": {
+              "text": "{{ product.metafields.descriptors.subtitle.value }}",
+              "text_style": "subtitle"
+            }
+          },
+          "price": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "variant_picker": {
+            "type": "variant_picker",
+            "settings": {
+              "picker_type": "button"
+            }
+          },
+          "quantity_selector": {
+            "type": "quantity_selector",
+            "settings": {
+            }
+          },
+          "buy_buttons": {
+            "type": "buy_buttons",
+            "settings": {
+              "show_dynamic_checkout": true
+            }
+          },
+          "description": {
+            "type": "description",
+            "settings": {
+            }
+          },
+          "share": {
+            "type": "share",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "vendor",
+          "title",
+          "subtitle",
+          "price",
+          "variant_picker",
+          "quantity_selector",
+          "buy_buttons",
+          "description",
+          "share"
+        ],
+        "settings": {
+          "enable_sticky_info": true,
+          "enable_video_looping": false
+        }
+      },
+      "16297332562751d196": {
+        "type": "cta-banner",
+        "blocks": {
+          "16297332562751d196-0": {
+            "type": "heading",
+            "settings": {
+              "title": "H2 Title",
+              "title_size": "fontmediumTitle",
+              "title_text_color": "#FFFFFF"
+            }
+          },
+          "16297332562751d196-1": {
+            "type": "description",
+            "settings": {
+              "description": "Welcome to Thrasio Theme! This is a new theme to promote your brand and amazing products!",
+              "description_size": "fontsmallDescription",
+              "description_text_color": "#FFFFFF"
+            }
+          },
+          "16297332562751d196-2": {
+            "type": "button",
+            "settings": {
+              "button_label": "Button Label",
+              "button_link": "",
+              "button_text_color": "#000000"
+            }
+          }
+        },
+        "block_order": [
+          "16297332562751d196-0",
+          "16297332562751d196-1",
+          "16297332562751d196-2"
+        ],
+        "settings": {
+          "cta_height": "40vh",
+          "background_color": "#000000",
+          "overlay_opacity": 35,
+          "info_alignment": "center"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "heading": "You may also like",
+          "image_ratio": "adapt",
+          "show_secondary_image": false,
+          "add_image_padding": false,
+          "show_vendor": false
+        }
+      }
+    },
+    "order": [
+      "main",
+      "16297332562751d196",
+      "product-recommendations"
+    ]
+  }

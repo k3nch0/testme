@@ -1,0 +1,117 @@
+.displayProducts {
+	padding: 50px 0;
+}
+
+.displayProducts div[class*=col-] {
+	margin-bottom: 1rem;
+}
+
+.displayProducts__product-img {
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+.displayProducts__product-img:hover {
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+.displayProducts__product-img:hover .displayProducts__cart-add{
+	color: black;
+}
+.displayProducts__product-img:hover .displayProducts__cart-add:hover{
+	color: white;
+}
+
+.displayProducts__product-img--square {
+	width: 280px;
+	height: 280px;
+	margin: 0 auto 1.5rem;
+}
+
+.displayProducts__product-img--circle {
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+	margin: 0 auto 1.5rem;
+}
+
+.displayProducts__product-img--rectangle {
+	width: 100%;
+	height: 350px;
+	margin: 0 auto 1.5rem;
+}
+
+.displayProducts__product-img .img-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.displayProducts__product-img img {
+	-o-object-fit: cover;
+	object-fit: cover;
+	filter: brightness(75%);
+	transition: all .2s ease-in-out;
+}
+.displayProducts__product-img:hover img {
+	filter: brightness(100%);
+	transform: scale(1.08);
+}
+
+.displayProducts__cart-add {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 1.4rem;
+	color: #FFFFFF;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+  	z-index: 5;
+}
+
+.displayProducts__cart-add:hover {
+	transform: scale(1.15);
+  	z-index: 5;
+}
+
+.displayProducts__product-info {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.displayProducts__product-title {
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 20px;
+	line-height: 1.3;
+}
+
+.displayProducts__product-price {
+	font-size: 1rem;
+	font-weight: 600;
+}
+.title--fontsmallTitle {
+	font-size: 2rem;
+}
+.title--fontmediumTitle {
+	font-size: 3rem;
+}
+.title--fontlargeTitle {
+	font-size: 4.5rem;
+}
+.title--fontxlargeTitle {
+	font-size: 6rem;
+}

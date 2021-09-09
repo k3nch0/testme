@@ -1,0 +1,88 @@
+.pageTopBanner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0;
+}
+.pageTopBanner--40vh {
+  height: 40vh;
+}
+.pageTopBanner--50vh {
+  height: 50vh;
+}
+.pageTopBanner--75vh {
+  height: 75vh;
+}
+.pageTopBanner--aligned-center .pageTopBanner__content-container {
+  justify-content: center;
+}
+.pageTopBanner--aligned-left .pageTopBanner__content-container {
+  justify-content: flex-start;
+  padding-left: 20rem;
+}
+.pageTopBanner--aligned-right .pageTopBanner__content-container {
+  justify-content: flex-end;
+  padding-right: 20rem;
+}
+.pageTopBanner__bg {
+	position: absolute;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.pageTopBanner__content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+.pageTopBanner__info {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pageTopBanner__title {
+  font-size: 3rem;
+  font-family: Bebas Neue;
+  color: #fff;
+  letter-spacing: 0.3rem;
+}
+.pageTopBanner__title--fontsmallTitle {
+  font-size: 2rem;
+}
+.pageTopBanner__title--fontmediumTitle {
+  font-size: 3rem;
+}
+.pageTopBanner__title--fontlargeTitle {
+  font-size: 4.5rem;
+}
+.pageTopBanner__title--fontxlargeTitle {
+  font-size: 6rem;
+}
+.pageTopBanner__description {
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.pageTopBanner__description--fontsmallDescription {
+  font-size: 1rem;
+}
+.pageTopBanner__description--fontmediumDescription {
+  font-size: 1.2rem;
+}
+.pageTopBanner__description--fontlargeDescription {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,46 @@
+.solo-product{
+  background: black;
+  padding: 100px 0;
+}
+.solo-product--25vh {
+  height: 25vh;
+}
+.solo-product--50vh {
+  height: 50vh;
+}
+.solo-product--75vh {
+  height: 75vh;
+}
+.solo-product--100vh {
+  height: 100vh;
+}
+.solo-product__img{
+  width: 100%;
+  height: auto;
+}
+.solo-product__title{
+  color: white;
+  font-size: 2rem;
+}
+.solo-product__description{
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.solo-product__button{
+  background: white;
+  padding: 15px 40px;
+  border: none;
+}
+.solo-product__title--fontsmallTitle {
+  font-size: 2rem;
+}
+.solo-product__title--fontmediumTitle {
+  font-size: 3rem;
+}
+.solo-product__title--fontlargeTitle {
+  font-size: 4.5rem;
+}
+.solo-product__title--fontxlargeTitle {
+  font-size: 6rem;
+}

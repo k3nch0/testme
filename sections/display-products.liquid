@@ -1,0 +1,386 @@
+{{ 'section-display-products.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.collection.all_products_count %}
+<div class="displayProducts">
+	<div class="container">
+		<div class="row">
+			<h2 class="title{% if section.settings.title == blank %} title--no-heading{% endif %} {{ section.settings.info_alignment }} {{- section.settings.title_size -}}" style="color: {{ section.settings.title_text_color }}">{{ section.settings.title | escape }}</h2>
+			{%- for product in section.settings.collection.products limit: section.settings.total_products -%}
+			<div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
+				<div class="displayProducts__collection-item">
+					{% assign opacity = section.settings.opacity | divided_by: 100.00 %}
+					<div class="displayProducts__product-img displayProducts__product-img--{{section.settings.container_shape}}" 
+					style="background-color: {{ section.settings.background_color | color_modify: 'alpha', opacity  }};">
+						<div class="displayProducts__cart-add"><i class="fas fa-cart-plus"></i></div>
+						{%- if product.images[0] != blank -%}
+						  <a href="{{product.url}}" class="img-link">
+								<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
+									{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
+									{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
+									{%- if product.images[0].width >= 720 -%}{{ product.images[0] | img_url: '720x' }} 720w,{%- endif -%}
+									{%- if product.images[0].width >= 940 -%}{{ product.images[0] | img_url: '940x' }} 940w,{%- endif -%}
+									{%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '2000x' }} 2000w{%- endif -%}"
+									src="{{ product.images[0] | img_url: '533x' }}"
+									sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+									alt="{{ product.images[0].alt | escape }}"
+									loading="lazy"
+									width="{{ product.images[0].width }}"
+									height="{{ product.images[0].height }}"
+									class="hero1__bg"
+								>
+							</a>
+						{%- else -%}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{%- endif -%}
+					</div>
+					<div class="displayProducts__product-info">
+						<div class="displayProducts__product-details">
+							{%- if section.settings.show_title == true -%}
+							<span class="displayProducts__product-title" style="color: {{ section.settings.text_color }}">
+								{{ product.title }}
+							</span>
+							{%- endif -%}
+							{%- if section.settings.show_price == true -%}
+							<span class="displayProducts__product-price" style="color: {{ section.settings.price_color }}">
+								{{ product.price | money }}
+							</span>
+							{%- endif -%}
+						</div>
+						<!---
+						<div class="displayProducts__colors">
+							<div class="displayProducts__color displayProducts__color--blue"></div>
+							<div class="displayProducts__color displayProducts__color--black"></div>
+						</div>
+						-->
+					</div>
+				</div>
+			</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</div>
+{% else %}
+	<div class="collection displayProducts">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="displayProducts__collection-item">
+						<div class="displayProducts__product-img displayProducts__product-img--rectangle">
+							<div class="displayProducts__cart-add"><i class="fas fa-cart-plus"></i></div>
+							<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
+									{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
+									{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
+									{%- if product.images[0].width >= 720 -%}{{ product.images[0] | img_url: '720x' }} 720w,{%- endif -%}
+									{%- if product.images[0].width >= 940 -%}{{ product.images[0] | img_url: '940x' }} 940w,{%- endif -%}
+									{%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '2000x' }} 2000w{%- endif -%}"
+									src="{{ product.images[0] | img_url: '533x' }}"
+									sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+									alt="{{ product.images[0].alt | escape }}"
+									loading="lazy"
+									width="{{ product.images[0].width }}"
+									height="{{ product.images[0].height }}"
+									class="hero1__bg"
+								>
+						</div>
+						<div class="displayProducts__product-info">
+							<div class="displayProducts__product-details"><span class="displayProducts__product-title">Product</span><span
+									class="displayProducts__product-price">$250</span></div>
+							<div class="displayProducts__colors">
+								<div class="displayProducts__color displayProducts__color--blue"></div>
+								<div class="displayProducts__color displayProducts__color--black"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="displayProducts__collection-item">
+						<div class="displayProducts__product-img displayProducts__product-img--rectangle">
+							<div class="displayProducts__cart-add"><i class="fas fa-cart-plus"></i></div>
+							<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
+									{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
+									{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
+									{%- if product.images[0].width >= 720 -%}{{ product.images[0] | img_url: '720x' }} 720w,{%- endif -%}
+									{%- if product.images[0].width >= 940 -%}{{ product.images[0] | img_url: '940x' }} 940w,{%- endif -%}
+									{%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '2000x' }} 2000w{%- endif -%}"
+									src="{{ product.images[0] | img_url: '533x' }}"
+									sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+									alt="{{ product.images[0].alt | escape }}"
+									loading="lazy"
+									width="{{ product.images[0].width }}"
+									height="{{ product.images[0].height }}"
+									class="hero1__bg"
+								>
+						</div>
+						<div class="displayProducts__product-info">
+							<div class="displayProducts__product-details"><span class="displayProducts__product-title">Product</span><span
+									class="displayProducts__product-price">$250</span></div>
+							<div class="displayProducts__colors">
+								<div class="displayProducts__color displayProducts__color--blue"></div>
+								<div class="displayProducts__color displayProducts__color--white"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="displayProducts__collection-item">
+						<div class="displayProducts__product-img displayProducts__product-img--rectangle">
+							<div class="displayProducts__cart-add"><i class="fas fa-cart-plus"></i></div>
+							<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
+									{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
+									{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
+									{%- if product.images[0].width >= 720 -%}{{ product.images[0] | img_url: '720x' }} 720w,{%- endif -%}
+									{%- if product.images[0].width >= 940 -%}{{ product.images[0] | img_url: '940x' }} 940w,{%- endif -%}
+									{%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '2000x' }} 2000w{%- endif -%}"
+									src="{{ product.images[0] | img_url: '533x' }}"
+									sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+									alt="{{ product.images[0].alt | escape }}"
+									loading="lazy"
+									width="{{ product.images[0].width }}"
+									height="{{ product.images[0].height }}"
+									class="hero1__bg"
+								>
+						</div>
+						<div class="displayProducts__product-info">
+							<div class="displayProducts__product-details">
+								<span class="displayProducts__product-title">Product</span>
+								<span class="displayProducts__product-price">$250</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+
+{% schema %}
+{
+	"name": "Display Products",
+	"class": "spaced-section spaced-section--full-width",
+	"settings": [
+	{
+        "type": "text",
+        "id": "title",
+        "label": "<H2>Heading</H2>",
+        "default": "Display Products"
+    },
+	{
+		"type": "select",
+		"id": "title_size",
+		"options": [
+			{
+			"value": "fontsmallTitle",
+			"label": "Small"
+			},
+			{
+			"value": "fontmediumTitle",
+			"label": "Medium"
+			},
+			{
+			"value": "fontlargeTitle",
+			"label": "Large"
+			},
+			{
+			"value": "fontxlargeTitle",
+			"label": "Extra Large"
+			}
+		],
+		"default": "fontmediumTitle",
+		"label": "Text Size"
+		},
+		{
+		"type": "color",
+		"id": "title_text_color",
+		"label": "Text Color",
+		"default": "#000000"
+	},
+	{
+		"type": "select",
+		"id": "info_alignment",
+		"options": [
+		  {
+			"value": "left",
+			"label": "Left Side"
+		  },
+		  {
+			"value": "center",
+			"label": "Centered"
+		  },
+		  {
+			"value": "right",
+			"label": "Right Side"
+		  }
+		],
+		"default": "center",
+		"label": "Info Alignment"
+	},
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "Choose Collection"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header.content"
+    },
+    {
+        "type": "select",
+        "id": "container_shape",
+        "options": [{
+                "value": "rectangle",
+                "label": "Rectangle"
+            },
+            {
+                "value": "square",
+                "label": "Square"
+            },
+            {
+                "value": "circle",
+                "label": "Circle"
+            }
+        ],
+        "default": "square",
+        "label": "Product Container Shape"
+    },
+    {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#EDEFF5"
+    },
+    {
+        "type": "range",
+        "id": "opacity",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "label": "Color Opacity",
+        "default": 100
+    },
+    {
+        "type": "checkbox",
+        "id": "show_title",
+        "label": "Show Product Title",
+        "default": true
+    },
+    {
+        "type": "color",
+        "id": "text_color",
+        "label": "Title Text Color",
+        "default": "#000000"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_price",
+        "label": "Show Product Price",
+        "default": true
+    },
+    {
+        "type": "color",
+        "id": "price_color",
+        "label": "Price Text Color",
+        "default": "#000000"
+    },
+	{
+		"type": "header",
+		"content": "Device Responsiveness"
+	  },
+	  {
+			  "type": "select",
+			  "id": "sm_col",
+			  "options": [{
+					  "value": "col-sm-6",
+					  "label": "2 Columns"
+				  },
+				  {
+					  "value": "col-sm-4",
+					  "label": "3 Columns"
+				  },
+				  {
+					  "value": "col-sm-3",
+					  "label": "4 Columns"
+				  },
+				  {
+					  "value": "col-sm-2",
+					  "label": "6 Column"
+				  }
+			  ],
+			  "default": "col-sm-6",
+			  "label": "Small Devices"
+		  },
+	  {
+			  "type": "select",
+			  "id": "md_col",
+			  "options": [{
+					  "value": "col-md-6",
+					  "label": "2 Columns"
+				  },
+				  {
+					  "value": "col-md-4",
+					  "label": "3 Columns"
+				  },
+				  {
+					  "value": "col-md-3",
+					  "label": "4 Columns"
+				  },
+				  {
+					  "value": "col-md-2",
+					  "label": "6 Column"
+				  }
+			  ],
+			  "default": "col-md-3",
+			  "label": "Medium Devices"
+		  },
+		  {
+			  "type": "select",
+			  "id": "lg_col",
+			  "options": [{
+					  "value": "col-lg-6",
+					  "label": "2 Columns"
+				  },
+				  {
+					  "value": "col-lg-4",
+					  "label": "3 Columns"
+				  },
+				  {
+					  "value": "col-lg-3",
+					  "label": "4 Columns"
+				  },
+				  {
+					  "value": "col-lg-2",
+					  "label": "6 Column"
+				  }
+			  ],
+			  "default": "col-lg-3",
+			  "label": "Large Devices"
+		  },
+	  {
+			  "type": "select",
+			  "id": "xl_col",
+			  "options": [{
+					  "value": "col-xl-6",
+					  "label": "2 Columns"
+				  },
+				  {
+					  "value": "col-xl-4",
+					  "label": "3 Columns"
+				  },
+				  {
+					  "value": "col-xl-3",
+					  "label": "4 Columns"
+				  },
+				  {
+					  "value": "col-xl-2",
+					  "label": "6 Column"
+				  }
+			  ],
+			  "default": "col-xl-3",
+			  "label": "Extra Large Devices"
+		  }
+  ],
+	"presets": [{
+		"name": "Display Products"
+	}]
+}
+{% endschema %}

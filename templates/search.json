@@ -1,0 +1,50 @@
+{
+    "sections": {
+      "16297346214a8b342c": {
+        "type": "page-top-banner",
+        "blocks": {
+          "16297346214a8b342c-0": {
+            "type": "heading",
+            "settings": {
+              "title": "H1 Title",
+              "title_size": "fontlargeTitle",
+              "title_text_color": "#FFFFFF"
+            }
+          },
+          "16297346214a8b342c-1": {
+            "type": "description",
+            "settings": {
+              "description": "Welcome to Thrasio Theme! This is a new theme to promote your brand and amazing products!",
+              "description_size": "fontlargeDescription",
+              "description_text_color": "#FFFFFF"
+            }
+          }
+        },
+        "block_order": [
+          "16297346214a8b342c-0",
+          "16297346214a8b342c-1"
+        ],
+        "settings": {
+          "banner_height": "50vh",
+          "background_color": "#000000",
+          "overlay_opacity": 50,
+          "info_alignment": "center"
+        }
+      },
+      "main": {
+        "type": "main-search",
+        "settings": {
+          "image_ratio": "adapt",
+          "show_secondary_image": false,
+          "enable_image_padding": false,
+          "show_vendor": false,
+          "article_show_date": true,
+          "article_show_author": false
+        }
+      }
+    },
+    "order": [
+      "16297346214a8b342c",
+      "main"
+    ]
+  }

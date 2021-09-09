@@ -1,0 +1,239 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "41a1d1b8-f5ba-4db4-be10-8748b5571e6c": {
+          "type": "divider",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "c95a1526-aedc-4ef3-909a-04ca43d6427d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About VYBE",
+            "content": "<p>Our brand new VYBE Flex is perfect for athletes at every level of training. With its 6 interchangeable attachment heads and 3 different strength levels, the Flex can be personalized to your ideal sports recovery. Supercharge your workout and recovery with the VYBE Flex before, during, and after training to activate muscles, improve performance, and maximize recovery. The Flex is also our most compact and portable massage gun yet, it can easily fit in your carry-on or gym bag. Additionally, with our updated USB charging port technology, you can charge your VYBE Flex almost anywhere, so you can keep your circulation flowing everywhere!<\/p>",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "29cde540-8bdc-4de5-8373-d00e82482346": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "content": "<p>The VYBE Flex is perfect for athletes at every level of training. With its 6 interchangeable attachment heads and 3 different strength levels, the Flex can be personalized to your ideal sports recovery. Supercharge your workout and recovery with the VYBE Flex before, during, and after training to activate muscles, improve performance, and maximize recovery. The Flex is also our most compact and portable massage gun yet, it can easily fit in your carry-on or gym bag, so you can keep your circulation flowing everywhere!<\/p>",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "3b40203a-68f0-4cbf-8289-6b49feb0c195": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "content": "",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "c2fe3bd3-3e2e-4afc-96c4-4c15ef6a91ab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "content": "",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "94af92c9-16d9-45f9-9ead-3b84cb81910d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Free Shipping and Free Returns",
+            "content": "",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "41a1d1b8-f5ba-4db4-be10-8748b5571e6c",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "c95a1526-aedc-4ef3-909a-04ca43d6427d",
+        "29cde540-8bdc-4de5-8373-d00e82482346",
+        "3b40203a-68f0-4cbf-8289-6b49feb0c195",
+        "c2fe3bd3-3e2e-4afc-96c4-4c15ef6a91ab",
+        "94af92c9-16d9-45f9-9ead-3b84cb81910d",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "display_breadcrumbs": true,
+        "enable_sticky_info": true,
+        "gallery_arrows": true,
+        "gallery_animation": "slide",
+        "product_images_position": "left",
+        "product_thumbs": false,
+        "thumbnail_position": "left-thumbnails",
+        "display_vendor": false,
+        "hide_variants": false,
+        "display_sku": false,
+        "display_collections": false,
+        "display_type": false,
+        "display_tags": false,
+        "display_social_buttons": true,
+        "enable_video_looping": false
+      }
+    },
+    "16304378375450e193": {
+      "type": "collage",
+      "blocks": {
+        "a76b089a-5228-4af8-baaa-26efc08a3e7f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/angled-closed-vybepro_optimized_copy.jpg",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "0e2e7554-37db-402a-b569-c80fd73079f5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/angled-opened-2-vybepro_optimized_1800x1000_5f45a9a5-e1d0-43c9-bd27-5287488b2be6.jpg",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "47dcd8c2-1c15-4b2b-8113-521330730d17": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/closeup-vybepro_optimized_medium_1e18eefd-c1bb-4219-b3af-59e70b931dba.jpg",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "a76b089a-5228-4af8-baaa-26efc08a3e7f",
+        "0e2e7554-37db-402a-b569-c80fd73079f5",
+        "47dcd8c2-1c15-4b2b-8113-521330730d17"
+      ],
+      "settings": {
+        "heading": "{{ product.title }}",
+        "desktop_layout": "right",
+        "mobile_layout": "collage"
+      }
+    },
+    "16297332562751d196": {
+      "type": "cta-banner",
+      "blocks": {
+        "16297332562751d196-0": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ product.title }}",
+            "title_size": "fontmediumTitle",
+            "title_text_color": "#ffffff"
+          }
+        },
+        "16297332562751d196-1": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "description": "",
+            "description_size": "fontsmallDescription",
+            "description_text_color": "#ffffff"
+          }
+        },
+        "16297332562751d196-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button Label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16297332562751d196-0",
+        "16297332562751d196-1",
+        "16297332562751d196-2"
+      ],
+      "settings": {
+        "cta_height": "40vh",
+        "image": "shopify:\/\/shop_images\/exercise-stretching.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 35,
+        "info_alignment": "center"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16304378375450e193",
+    "16297332562751d196",
+    "product-recommendations"
+  ]
+}

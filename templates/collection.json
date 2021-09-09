@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "162973316472e6a272": {
+      "type": "page-top-banner",
+      "blocks": {
+        "162973316472e6a272-0": {
+          "type": "heading",
+          "settings": {
+            "title": "VYBE MASSAGE GUNS",
+            "title_size": "fontlargeTitle",
+            "title_text_color": "#ffffff"
+          }
+        },
+        "162973316472e6a272-1": {
+          "type": "description",
+          "settings": {
+            "description": "Explore our massage gun models below!",
+            "description_size": "fontlargeDescription",
+            "description_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "162973316472e6a272-0",
+        "162973316472e6a272-1"
+      ],
+      "settings": {
+        "banner_height": "40vh",
+        "image": "shopify:\/\/shop_images\/closeup-vybex-2_optimized.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 50,
+        "info_alignment": "center"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false
+      }
+    }
+  },
+  "order": [
+    "162973316472e6a272",
+    "banner",
+    "product-grid"
+  ]
+}

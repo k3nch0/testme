@@ -1,0 +1,202 @@
+{{ 'section-solo-product.css' | asset_url | stylesheet_tag }}
+<div class="solo-product solo-product--{{ section.settings.section_height }}"; style="background-color: {{ section.settings.background_color }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {%- if section.settings.image != blank -%}
+          <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+            {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '2000x' }} 2000w{%- endif -%}"
+            src="{{ section.settings.image | img_url: '533x' }}"
+            sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="solo-product__img"
+          >
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+      <div class="col-md-4">
+        <div class="solo-product__info-container">
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'heading' -%}
+                <h2 class="solo-product__title solo-product__title--{{- block.settings.title_size -}}" style="color: {{ block.settings.title_text_color }}">
+                  {{ block.settings.title | escape }}
+                </h2>
+              {%- when 'description' -%}
+                <p class="solo-product__description" style="color: {{ block.settings.description_text_color }}">
+                  {{ block.settings.description | escape }}
+                </p>
+              {%- when 'button' -%}
+                {%- if block.settings.button_label != blank -%}
+                  <button class="solo-product__button" style="color: {{ block.settings.button_text_color }}">
+                    {% assign button_title = block.settings.button_label | escape %}
+                    {% assign product_url = block.settings.button_link %}Title</button>
+                {%- endif -%}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Solo Product Section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Solo Product Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "options": [
+        {
+          "value": "25vh",
+          "label": "25%"
+        },
+        {
+          "value": "50vh",
+          "label": "50%"
+        },
+        {
+          "value": "75vh",
+          "label": "75%"
+        },
+        {
+          "value": "100vh",
+          "label": "100%"
+        }
+      ],
+      "default": "75vh",
+      "label": "Section Height"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Product Title [H2]",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title [H2]",
+          "default": "Product Title [H2]"
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "options": [
+            {
+              "value": "fontsmallTitle",
+              "label": "Small"
+            },
+            {
+              "value": "fontmediumTitle",
+              "label": "Medium"
+            },
+            {
+              "value": "fontlargeTitle",
+              "label": "Large"
+            },
+            {
+              "value": "fontxlargeTitle",
+              "label": "Extra Large"
+            }
+          ],
+          "default": "fontlargeTitle",
+          "label": "Text Size"
+        },
+        {
+          "type": "color",
+          "id": "title_text_color",
+          "label": "Text Color",
+          "default": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description/Slogan",
+          "default": "Welcome to Thrasio Theme! This is a new theme to promote your brand and amazing products!"
+        },
+        {
+          "type": "color",
+          "id": "description_text_color",
+          "label": "Text Color",
+          "default": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Add To Cart",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Text Color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Solo Product Section",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "description"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

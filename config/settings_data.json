@@ -1,0 +1,113 @@
+{
+  "current": {
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
+    "social_instagram_link": "https:\/\/instagram.com\/shopify",
+    "social_tiktok_link": "https:\/\/tiktok.com\/shopify",
+    "social_youtube_link": "https:\/\/youtube.com\/shopify",
+    "favicon": "shopify:\/\/shop_images\/1615581696656_21dfeb88-295d-4168-a29c-aeda4ffca1ec.jpg",
+    "hau_form_options": "Facebook, Twitter, Google, Instagram, Youtube, Thrasio, Amazon",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "social_icons_header": true,
+          "show_cart": true,
+          "top_bar_menu": "",
+          "cart_icon": "cart",
+          "enable_sticky_header": true,
+          "header_type": "header3",
+          "logo": "shopify:\/\/shop_images\/thrasio_white_trans.png",
+          "logo_width": 80,
+          "menu": "main-menu",
+          "menu_two": "main-menu",
+          "megamenu": true,
+          "header_background_color": "#000000",
+          "header_sticky_color": "#000000",
+          "header_text_color": "#b6b6b6",
+          "header_hover_color": "#ffffff",
+          "header_hover_effect": "underline",
+          "font_size": "fontmediumHeader",
+          "customFont": true,
+          "fontFamily": "work_sans_n6",
+          "enableddesktopSearch": true,
+          "enableddesktopAccount": true,
+          "enableddesktopCurrency": true,
+          "enableddesktopCart": true,
+          "enabledmobileSearch": true,
+          "mobileAccount": true,
+          "mobileCurrency": true,
+          "mobileCart": true
+        }
+      },
+      "announcement-banner": {
+        "type": "announcement-banner",
+        "blocks": {
+          "announcement-banner-0": {
+            "type": "announcement",
+            "settings": {
+              "enabled": true,
+              "home_page_only": false,
+              "message": "FREE SHIPPING ON ALL US ORDERS",
+              "banner_text_color": "#eaeaea",
+              "banner_background_color": "#0e0e0e",
+              "clicklink": "",
+              "font_size": "fontSmall",
+              "height": 15
+            }
+          }
+        },
+        "block_order": [
+          "announcement-banner-0"
+        ],
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Site Directory",
+              "menu": "main-menu"
+            }
+          },
+          "f9fab201-b7b6-462a-bd78-8939d10bf136": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Partner Brands",
+              "menu": "footer"
+            }
+          },
+          "d84d6507-7017-495a-93f2-deade3a52dc0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Learn More",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "f9fab201-b7b6-462a-bd78-8939d10bf136",
+          "d84d6507-7017-495a-93f2-deade3a52dc0"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/thrasio_white_trans_1_200x160_48bb96c5-829b-4d43-a33d-083a82d07e00.png",
+          "logo_width": 250,
+          "newsletter_enable": true,
+          "newsletter_heading": "Join Our Newsletter",
+          "footer_description": "Become a part of our VYBE community. Stay in touch for monthly newsletters, new products, and deals!",
+          "footer_bottom_menu": "footer",
+          "show_social": true,
+          "payment_enable": true
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

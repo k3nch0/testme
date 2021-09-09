@@ -1,0 +1,119 @@
+{{ 'announcement-banner.css' | asset_url | stylesheet_tag }}
+
+{%- for block in section.blocks -%}
+{% unless block.settings.enabled == false %}
+{% if block.settings.home_page_only == false or request.page_type == 'index' %}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+      <div class="announcement-banner {{ block.settings.font_size }}" style="color: {{ block.settings.banner_text_color }}; background: {{ block.settings.banner_background_color }}; height: {{ block.settings.height }}px; line-height: {{ block.settings.height }}px; overflow: hidden;" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+        {%- if block.settings.message != blank -%}
+          {%- if block.settings.clicklink != blank -%}
+            <a href="{{ block.settings.clicklink }}" style="color: {{ block.settings.banner_text_color }}; text-decoration: none">
+          {%- endif -%}
+            {{ block.settings.message | escape }}     
+          {%- if block.settings.clicklink != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+  {%- endcase -%}
+  {% endif %}
+  {% endunless %}
+{%- endfor -%}
+
+{% schema %}
+{
+  "name": {
+    "en": "Announcement Banner"
+  },
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement Text",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Thrasher Theme Guru Card"
+        },
+        {
+          "type": "paragraph",
+          "content": "[Click here for tips and best practices](https://thrasio.com)"
+        },
+        {
+          "type": "header",
+          "content": "Enable/Disable"
+        },
+        {
+          "type": "checkbox",
+          "id": "enabled",
+          "label": "Enable for Website",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "home_page_only",
+          "label": "Show on Home Page Only",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "id": "message",
+          "type": "text",
+          "label": "Announcement Text",
+          "info": "Enter Announcement Here",
+          "default": "Welcome To Thrasher Theme"
+        },
+        {
+          "type": "color",
+          "id": "banner_text_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "banner_background_color",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "url",
+          "id": "clicklink",
+          "label": "Clickable Link"
+        },
+        {
+          "type": "select",
+          "label": "Text Size",
+          "id": "font_size",
+          "options": [
+            {"value": "fontSmall", "label": "Small"},
+            {"value": "fontMedium", "label": "Medium"},
+            {"value": "fontLarge", "label": "Large"}
+          ],
+          "default": "fontMedium"
+        },
+        {
+          "type": "range",
+          "id": "height",
+          "label": "Bar Height",
+          "default": 15,
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "px"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement"
+      }
+    ]
+  }
+}
+{% endschema %}

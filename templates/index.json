@@ -1,0 +1,366 @@
+{
+  "sections": {
+    "1627337391af5cd096": {
+      "type": "hero-one",
+      "blocks": {
+        "1627337391af5cd096-0": {
+          "type": "heading",
+          "settings": {
+            "title": "VYBE Percussion",
+            "title_size": "fontlargeTitle",
+            "title_text_color": "#ffffff"
+          }
+        },
+        "1627337391af5cd096-1": {
+          "type": "description",
+          "settings": {
+            "description": "VYBE Massage guns provide the luxury of unlimited massages whenever and wherever you need it. Massage guns are perfect for breaking up the knots in muscles and improving muscle recovery.",
+            "description_size": "fontmediumDescription",
+            "description_text_color": "#ffffff"
+          }
+        },
+        "1627337391af5cd096-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Your VYBE",
+            "button_link": "shopify:\/\/collections\/vybe",
+            "button_text_color": "#ffffff",
+            "hover_text_color": "#000000",
+            "button_background_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "1627337391af5cd096-0",
+        "1627337391af5cd096-1",
+        "1627337391af5cd096-2"
+      ],
+      "settings": {
+        "hero_height": "100vh",
+        "image": "shopify:\/\/shop_images\/closeup-vybepro_optimized_test.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 56,
+        "info_alignment": "left"
+      }
+    },
+    "16300063183b93d7b9": {
+      "type": "featured-on",
+      "blocks": {
+        "16300063183b93d7b9-0": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/insider-logo.png"
+          }
+        },
+        "16300063183b93d7b9-1": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/mashable-logo.png"
+          }
+        },
+        "3ff5037a-1ba0-47a4-8e82-542d4ab94403": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/bustle-logo.png"
+          }
+        },
+        "16300063183b93d7b9-2": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/womenshealth-logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "16300063183b93d7b9-0",
+        "16300063183b93d7b9-1",
+        "3ff5037a-1ba0-47a4-8e82-542d4ab94403",
+        "16300063183b93d7b9-2"
+      ],
+      "settings": {
+        "title": "",
+        "title_size": "fontlargeTitle",
+        "title_text_color": "#5e5e5e",
+        "info_alignment": "center",
+        "container_shape": "square",
+        "backgroundcolor": "#ffffff",
+        "opacity": 0,
+        "sm_col": "col-sm-6",
+        "med_col": "col-med-4",
+        "lg_col": "col-lg-3",
+        "xl_col": "col-xl-3"
+      }
+    },
+    "1630337739773101c1": {
+      "type": "image-with-text",
+      "blocks": {
+        "1630337739773101c1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "VYBE - 2021"
+          }
+        },
+        "1630337739773101c1-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "1630337739773101c1-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop VYBE",
+            "button_link": "shopify:\/\/products\/vybe-v2-massage-gun"
+          }
+        }
+      },
+      "block_order": [
+        "1630337739773101c1-0",
+        "1630337739773101c1-1",
+        "1630337739773101c1-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vybe-x-ultimate.jpg",
+        "height": "adapt",
+        "color_scheme": "accent-1",
+        "layout": "text_first"
+      }
+    },
+    "1627576068074e99de": {
+      "type": "display-products",
+      "settings": {
+        "title": "Top Selling Right Now",
+        "title_size": "fontmediumTitle",
+        "title_text_color": "#5e5e5e",
+        "info_alignment": "center",
+        "collection": "vybe",
+        "container_shape": "square",
+        "background_color": "#000000",
+        "opacity": 50,
+        "show_title": true,
+        "text_color": "#000000",
+        "show_price": true,
+        "price_color": "#595959",
+        "sm_col": "col-sm-6",
+        "md_col": "col-md-3",
+        "lg_col": "col-lg-3",
+        "xl_col": "col-xl-3"
+      }
+    },
+    "162982355416482b26": {
+      "type": "cta-banner",
+      "blocks": {
+        "162982355416482b26-0": {
+          "type": "heading",
+          "settings": {
+            "title": "H2 Title",
+            "title_size": "fontmediumTitle",
+            "title_text_color": "#ffffff"
+          }
+        },
+        "162982355416482b26-1": {
+          "type": "description",
+          "settings": {
+            "description": "Welcome to Thrasio Theme! This is a new theme to promote your brand and amazing products!",
+            "description_size": "fontsmallDescription",
+            "description_text_color": "#ffffff"
+          }
+        },
+        "162982355416482b26-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "How To Use VYBE",
+            "button_link": "shopify:\/\/products\/vybe-premium-massage-gun"
+          }
+        }
+      },
+      "block_order": [
+        "162982355416482b26-0",
+        "162982355416482b26-1",
+        "162982355416482b26-2"
+      ],
+      "settings": {
+        "cta_height": "25vh",
+        "image": "shopify:\/\/shop_images\/pexels-photo-2901581.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 35,
+        "info_alignment": "right"
+      }
+    },
+    "16303467224cd11745": {
+      "type": "collage",
+      "blocks": {
+        "16303467224cd11745-0": {
+          "type": "video",
+          "settings": {
+            "cover_image": "shopify:\/\/shop_images\/angled-opened-2-vybepro_optimized_1800x1000_5f45a9a5-e1d0-43c9-bd27-5287488b2be6.jpg",
+            "video_url": "https:\/\/youtu.be\/0XYbo1YGo0c",
+            "description": "vybe pro model percussion massage gun",
+            "image_padding": false
+          }
+        },
+        "0108e78a-bca4-4511-934b-30af7796f902": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/angled-closed-vybepro_optimized_copy.jpg",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "a20b899f-07c5-435d-96b6-5f3b8b224a69": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/closeup-vybex-2_optimized.jpg",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "16303467224cd11745-0",
+        "0108e78a-bca4-4511-934b-30af7796f902",
+        "a20b899f-07c5-435d-96b6-5f3b8b224a69"
+      ],
+      "settings": {
+        "heading": "",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "16296578215ab59eb5": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Top Selling Right Now",
+        "title_size": "fontmediumTitle",
+        "title_text_color": "#5e5e5e",
+        "info_alignment": "center",
+        "collection": "vybe",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "16298234228b746a89": {
+      "type": "cta-banner",
+      "blocks": {
+        "16298234228b746a89-0": {
+          "type": "heading",
+          "settings": {
+            "title": "H2 Title",
+            "title_size": "fontmediumTitle",
+            "title_text_color": "#ffffff"
+          }
+        },
+        "16298234228b746a89-1": {
+          "type": "description",
+          "settings": {
+            "description": "Welcome to Thrasio Theme! This is a new theme to promote your brand and amazing products!",
+            "description_size": "fontsmallDescription",
+            "description_text_color": "#ffffff"
+          }
+        },
+        "16298234228b746a89-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore VYBE Products",
+            "button_link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "16298234228b746a89-0",
+        "16298234228b746a89-1",
+        "16298234228b746a89-2"
+      ],
+      "settings": {
+        "cta_height": "25vh",
+        "image": "shopify:\/\/shop_images\/close-up-of-purple-and-blue-laces.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 35,
+        "info_alignment": "left"
+      }
+    },
+    "1629137753e018660a": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog Posts",
+        "title_size": "fontmediumTitle",
+        "title_text_color": "#5e5e5e",
+        "blog": "news",
+        "post_limit": 3,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "show_image": true,
+        "soft_background": false
+      }
+    },
+    "1631050040122f4cc5": {
+      "type": "partner-brands",
+      "blocks": {
+        "1631050040970aabbf-0": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/wiseowl-logo_e6c89d4c-3636-496f-be44-3c4a79abd3e0.png"
+          }
+        },
+        "1631050040970aabbf-1": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/angry-orange-logo_080d2881-9891-4e43-9e39-0c161854135a.jpg"
+          }
+        },
+        "1631050040970aabbf-2": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/1615581696656_21dfeb88-295d-4168-a29c-aeda4ffca1ec.jpg"
+          }
+        },
+        "3c5cbbab-5d97-44ad-93bb-56db1c56e92f": {
+          "type": "company_logo",
+          "settings": {
+            "company_logo": "shopify:\/\/shop_images\/Katchy_Brand_Logo_9eab8d0e-9633-4266-82fd-7b33c85e9d24.png"
+          }
+        }
+      },
+      "block_order": [
+        "1631050040970aabbf-0",
+        "1631050040970aabbf-1",
+        "1631050040970aabbf-2",
+        "3c5cbbab-5d97-44ad-93bb-56db1c56e92f"
+      ],
+      "settings": {
+        "title": "Partner Brands",
+        "title_size": "fontlargeTitle",
+        "title_text_color": "#5e5e5e",
+        "info_alignment": "center",
+        "container_shape": "circle",
+        "backgroundcolor": "#ffffff",
+        "opacity": 0,
+        "sm_col": "col-sm-6",
+        "med_col": "col-med-4",
+        "lg_col": "col-lg-3",
+        "xl_col": "col-xl-3"
+      }
+    }
+  },
+  "order": [
+    "1627337391af5cd096",
+    "16300063183b93d7b9",
+    "1630337739773101c1",
+    "1627576068074e99de",
+    "162982355416482b26",
+    "16303467224cd11745",
+    "16296578215ab59eb5",
+    "16298234228b746a89",
+    "1629137753e018660a",
+    "1631050040122f4cc5"
+  ]
+}
